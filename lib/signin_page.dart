@@ -41,7 +41,8 @@ class SigninPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0)),),
               onPressed: (){},
                 child: const Text("Sign in with Google",style: TextStyle(color: Colors.black87,fontSize: 17),),),
-       //    ElevatedButton(
+//       !!Instead of repeating the code we can do make a different class  and reuse it
+        //    ElevatedButton(
         //
         //         style: ElevatedButton.styleFrom(primary: Colors.white,
         //           shape:RoundedRectangleBorder(
@@ -56,19 +57,19 @@ class SigninPage extends StatelessWidget {
         //             borderRadius: BorderRadius.circular(5.0)),),
         //       onPressed: (){},
         //         child: const Text("Sign in with Gmail",style: TextStyle(color: Colors.black87,fontSize: 17),),),
-        //     const SizedBox(height: 8.0,),
-        //     CustomWidget(child: const Text("Sign in with Facebook",
-        //       style: TextStyle(color: Colors.black87,fontSize: 17),),
-        //       color:Colors.white,
-        //       borderRadius:4.0,
-        //       onPressed: (){},
-        //          ),
-        //     CustomWidget(child: const Text("Sign in with Email",
-        //       style: TextStyle(color: Colors.black87,fontSize: 17),),
-        //       color:Colors.white,
-        //       borderRadius:4.0,
-        //       onPressed: (){},
-        //          ),
+            const SizedBox(height: 8.0,),
+            CustomWidget(child: const Text("Sign in with Facebook",
+              style: TextStyle(color: Colors.black87,fontSize: 17),),
+              color:Colors.white,
+              borderRadius:4.0,
+              onPressed: (){},
+                 ),
+            CustomWidget(child: const Text("Sign in with Email",
+              style: TextStyle(color: Colors.black87,fontSize: 17),),
+              color:Colors.white,
+              borderRadius:4.0,
+              onPressed: (){},
+                 ),
           ],
         ),
     );
