@@ -1,23 +1,31 @@
+//  !! With the help of this class we can make buttons by using its constructor
 import 'package:flutter/material.dart';
 
-
-
 class CustomWidget extends StatelessWidget {
-   const CustomWidget({required this.child,required this.color,required this.borderRadius,required this.onPressed});
-
-  final Widget child;
+  final Widget? child;
   final Color? color;
-  final double borderRadius;
+  final double? borderRadius;
   final VoidCallback? onPressed;
+  final double? height;
+
+   const CustomWidget({
+     this.child,
+     this.color,
+     this.height:40.0,
+     this.borderRadius:8.0,
+     this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.white,shape:RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius)),),
-      onPressed: onPressed,
-      child: child,
+    return SizedBox(
+      height: 50.0,//this height is visible in box
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: color,shape:RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius!)),),
+        onPressed: onPressed,
+        child: child,
+      ),
     );
   }
 }
