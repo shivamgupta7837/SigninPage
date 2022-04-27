@@ -13,7 +13,8 @@ class CustomWidget extends StatelessWidget {
      this.color,
      this.height:40.0,
      this.borderRadius:8.0,
-     this.onPressed});
+     this.onPressed,
+   });
 
   @override
   Widget build(BuildContext context) {

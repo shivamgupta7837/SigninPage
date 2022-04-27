@@ -37,10 +37,23 @@ class SigninPage extends StatelessWidget {
           const SizedBox(
             height: 48.0,
           ),
+          CustomWidget(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset("asset/images/google-logo.png",),
+                const Text("Sign in with google",style:TextStyle(color:Colors.black87)),
+                Opacity(
+                  opacity: 0.0,
+                  child:Image.asset("asset/images/google-logo.png",),)
+              ],
+            ),
+            color:Colors.white,
+            onPressed: (){},
+          ),
           CustomSigninButton(
             //here we are using constructor of CustomSigninButton class
             text: "Sign in with Google",
-            fontsize: 19.0,
             textcolor: Colors.black87,
             color: Colors.white,
             onPressed: () {},
@@ -68,7 +81,6 @@ class SigninPage extends StatelessWidget {
           CustomSigninButton(
             //here we are using constructor of CustomSigninButton class
             text: "Sign in with Facebook",
-            fontsize: 19.0,
             textcolor: Colors.black87,
             color: Color(0xFF334D92),
             onPressed: () {},
